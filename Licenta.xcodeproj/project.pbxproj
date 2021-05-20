@@ -26,12 +26,14 @@
 		A9746A51261CCC0D001C5AF2 /* FoodTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9746A4F261CCC0D001C5AF2 /* FoodTableViewCell.swift */; };
 		A9746A52261CCC0D001C5AF2 /* FoodTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A9746A50261CCC0D001C5AF2 /* FoodTableViewCell.xib */; };
 		A976D333262CC0B5005EDBB9 /* MenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A976D332262CC0B5005EDBB9 /* MenuController.swift */; };
-		A976D336262CC3C0005EDBB9 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A976D335262CC3C0005EDBB9 /* InfoViewController.swift */; };
+		A983721D2656639300755428 /* InfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A983721B2656639300755428 /* InfoCell.swift */; };
+		A983721E2656639300755428 /* InfoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A983721C2656639300755428 /* InfoCell.xib */; };
 		A983736E2625FA2400CFB245 /* RestaurantViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A983736D2625FA2400CFB245 /* RestaurantViewController.swift */; };
 		A987331325F96A9A00DE3991 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A987331225F96A9A00DE3991 /* HomeViewController.swift */; };
 		A988D78B262CCBE60039A1B3 /* SideMenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A988D789262CCBE60039A1B3 /* SideMenuCell.swift */; };
 		A988D78C262CCBE60039A1B3 /* SideMenuCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A988D78A262CCBE60039A1B3 /* SideMenuCell.xib */; };
 		A988D790262E0E3B0039A1B3 /* ResetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A988D78F262E0E3B0039A1B3 /* ResetPasswordViewController.swift */; };
+		A98C3A4126565CD9001F5877 /* InfoTableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98C3A4026565CD9001F5877 /* InfoTableController.swift */; };
 		A9C9CCB225FA4DFB0090F8F0 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9C9CCB125FA4DFB0090F8F0 /* Constants.swift */; };
 /* End PBXBuildFile section */
 
@@ -58,12 +60,14 @@
 		A9746A4F261CCC0D001C5AF2 /* FoodTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodTableViewCell.swift; sourceTree = "<group>"; };
 		A9746A50261CCC0D001C5AF2 /* FoodTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FoodTableViewCell.xib; sourceTree = "<group>"; };
 		A976D332262CC0B5005EDBB9 /* MenuController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuController.swift; sourceTree = "<group>"; };
-		A976D335262CC3C0005EDBB9 /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
+		A983721B2656639300755428 /* InfoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoCell.swift; sourceTree = "<group>"; };
+		A983721C2656639300755428 /* InfoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InfoCell.xib; sourceTree = "<group>"; };
 		A983736D2625FA2400CFB245 /* RestaurantViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantViewController.swift; sourceTree = "<group>"; };
 		A987331225F96A9A00DE3991 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		A988D789262CCBE60039A1B3 /* SideMenuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuCell.swift; sourceTree = "<group>"; };
 		A988D78A262CCBE60039A1B3 /* SideMenuCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SideMenuCell.xib; sourceTree = "<group>"; };
 		A988D78F262E0E3B0039A1B3 /* ResetPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordViewController.swift; sourceTree = "<group>"; };
+		A98C3A4026565CD9001F5877 /* InfoTableController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoTableController.swift; sourceTree = "<group>"; };
 		A9C9CCB125FA4DFB0090F8F0 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		B4CFF01B413D82CE2599D664 /* Pods_Licenta.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Licenta.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -130,6 +134,7 @@
 				A9746A50261CCC0D001C5AF2 /* FoodTableViewCell.xib */,
 				A94A1242262709620089C864 /* CartTableViewCell.xib */,
 				A988D78A262CCBE60039A1B3 /* SideMenuCell.xib */,
+				A983721C2656639300755428 /* InfoCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -147,9 +152,10 @@
 				A931D805262628650008BB9D /* CartViewController.swift */,
 				A94A1241262709620089C864 /* CartTableViewCell.swift */,
 				A976D332262CC0B5005EDBB9 /* MenuController.swift */,
-				A976D335262CC3C0005EDBB9 /* InfoViewController.swift */,
 				A988D789262CCBE60039A1B3 /* SideMenuCell.swift */,
 				A988D78F262E0E3B0039A1B3 /* ResetPasswordViewController.swift */,
+				A98C3A4026565CD9001F5877 /* InfoTableController.swift */,
+				A983721B2656639300755428 /* InfoCell.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -191,7 +197,7 @@
 				A960A1B225F7B4E6002E7C29 /* Sources */,
 				A960A1B325F7B4E6002E7C29 /* Frameworks */,
 				A960A1B425F7B4E6002E7C29 /* Resources */,
-				A89342B719DE1C52F2E05350 /* [CP] Embed Pods Frameworks */,
+				756161577B1C0B480BE3080E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -243,6 +249,7 @@
 				A960A1C625F7B4E9002E7C29 /* LaunchScreen.storyboard in Resources */,
 				A94A1244262709620089C864 /* CartTableViewCell.xib in Resources */,
 				A988D78C262CCBE60039A1B3 /* SideMenuCell.xib in Resources */,
+				A983721E2656639300755428 /* InfoCell.xib in Resources */,
 				A912818625F9642200B639CC /* GoogleService-Info.plist in Resources */,
 				A960A1C125F7B4E6002E7C29 /* Main.storyboard in Resources */,
 				A945EDAD2600F20000B6E28C /* Assets.xcassets in Resources */,
@@ -275,7 +282,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		A89342B719DE1C52F2E05350 /* [CP] Embed Pods Frameworks */ = {
+		756161577B1C0B480BE3080E /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -304,7 +311,7 @@
 				A988D790262E0E3B0039A1B3 /* ResetPasswordViewController.swift in Sources */,
 				A960A1BE25F7B4E6002E7C29 /* ViewController.swift in Sources */,
 				A983736E2625FA2400CFB245 /* RestaurantViewController.swift in Sources */,
-				A976D336262CC3C0005EDBB9 /* InfoViewController.swift in Sources */,
+				A983721D2656639300755428 /* InfoCell.swift in Sources */,
 				A960A1BA25F7B4E6002E7C29 /* AppDelegate.swift in Sources */,
 				A931D806262628650008BB9D /* CartViewController.swift in Sources */,
 				A988D78B262CCBE60039A1B3 /* SideMenuCell.swift in Sources */,
@@ -315,6 +322,7 @@
 				A9C9CCB225FA4DFB0090F8F0 /* Constants.swift in Sources */,
 				A91F7A9225F826FE00FE2EA8 /* SignUpViewController.swift in Sources */,
 				A945EDA72600EF4300B6E28C /* homeTableViewCell.swift in Sources */,
+				A98C3A4126565CD9001F5877 /* InfoTableController.swift in Sources */,
 				A987331325F96A9A00DE3991 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

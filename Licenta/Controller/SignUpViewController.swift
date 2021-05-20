@@ -57,7 +57,9 @@ class SignUpViewController: UIViewController {
                 else
                 {
                     let db = Firestore.firestore()
-                    db.collection("Users").addDocument(data: ["name": nameUser, "address": addressUser, "phoneNumber": numberUser, "uid": result!.user.uid]) { (error) in
+                    let userID = (Auth.auth().currentUser?.uid)!
+                    //db.collection("Users").addDocument(data: ["name": nameUser, "address": addressUser, "phoneNumber": numberUser, "uid": result!.user.uid]) { (error) in
+                    db.collection("Users").document(userID).setData(["name": nameUser, "address": addressUser, "phoneNumber": numberUser,"email": emailUser, "uid": result!.user.uid]) { (error) in
                         if error != nil
                         {
                             self.showError("Eroare la salvarea datelor")

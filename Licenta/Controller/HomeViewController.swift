@@ -25,7 +25,7 @@ class HomeViewController: UIViewController, MenuControllerDelegate {
     @IBOutlet var homeTableView: UITableView!
     
     private var sideMenu: SideMenuNavigationController?
-    private let infoController = InfoViewController()
+    private let infoController = InfoTableController()
     var datas: [Category] = []
     var filteredData: [Category]!
     
@@ -83,7 +83,7 @@ class HomeViewController: UIViewController, MenuControllerDelegate {
             
         case .info:
             
-            let infoViewController = self.storyboard?.instantiateViewController(identifier: "infoVC") as? UINavigationController
+            let infoViewController = self.storyboard?.instantiateViewController(identifier: "vcInfo") as? UINavigationController
             
             self.view.window?.rootViewController = infoViewController
             self.view.window?.makeKeyAndVisible()

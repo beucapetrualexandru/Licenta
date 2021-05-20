@@ -32,7 +32,6 @@ class CartViewController: UIViewController {
         getCartProducts()
         let nib = UINib(nibName: "CartTableViewCell", bundle: nil)
         cartTableView.register(nib, forCellReuseIdentifier: "CartTableViewCell")
-        
         cartTableView.delegate = self
         cartTableView.dataSource = self
         
@@ -92,7 +91,6 @@ extension CartViewController: UITableViewDelegate, UITableViewDataSource
         let carts = cart[indexPath.row]
         let storageRef = Storage.storage().reference()
         let photoRef = storageRef.child(carts.photoKeyCart)
-        
         cell.foodInCartPrice.text = " \(carts.priceCart) lei "
         cell.foodInCartName.text = carts.foodCart
         cell.foodInCartImage.sd_setImage(with: photoRef)
@@ -118,44 +116,44 @@ extension CartViewController: UITableViewDelegate, UITableViewDataSource
         
         if (editingStyle == UITableViewCell.EditingStyle.delete) {
             
-        let carts = cart[indexPath.row]
-        let storageRef = Storage.storage().reference()
-        let photoRef = storageRef.child(carts.photoKeyCart)
-        
-        photoRef.delete { error in
-            if let error = error {
-                print(error.localizedDescription)
-            } else {
-                print("File deleted successfully")
-            }
-        }}
-    
-        let db = Firestore.firestore()
-        let userID = (Auth.auth().currentUser?.uid)!
-        
-      
-        db.collection("cities").document(userID).collection("CartItems").document().delete() { err in
-            if let err = err {
-                print("Error removing document: \(err)")
-            } else {
-                print("Document successfully removed!")
-            }
-        }
-          
-                    //self.db.collection("users").document((user?.uid)!).collection("children").document("\(document.documentID)").delete()
-                
+            let carts = cart[indexPath.row]
+
+            let storageRef = Storage.storage().reference()
+            let photoRef = storageRef.child(carts.photoKeyCart)
             
+            photoRef.delete { error in
+                if let error = error {
+                    print(error.localizedDescription)
+                } else {
+                    print("File deleted successfully")
+                }
+            }
+        let db = Firestore.firestore()
+            let name = cart[indexPath.row].foodCart
+                    let user = Auth.auth().currentUser
+                    let collectionReference = db.collection("CartDatabase").document((user?.uid)!).collection("CartItems")
+            let query : Query = collectionReference.whereField("foodCart", isEqualTo: name)
+                    query.getDocuments(completion: { (snapshot, error) in
+                        if let error = error {
+                            print(error.localizedDescription)
+                        } else {
+                            for document in snapshot!.documents {
+                                //print("\(document.documentID) => \(document.data())")
+                                db.collection("CartDatabase").document((user?.uid)!).collection("CartItems").document("\(document.documentID)").delete()
+                        }
+                    }})
         
         
         
-        // 3. Now remove from TableView
+        
         cart.remove(at: indexPath.row)
         tableView.deleteRows(at: [indexPath], with: .fade)
         
     }
-
-
-
-
-
+    
+    
+    
+    
+    
+}
 }
